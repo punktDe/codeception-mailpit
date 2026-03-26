@@ -43,6 +43,9 @@ class Mail
         $this->mailData = $mailData;
 
         $this->body = Arrays::getValueByPath($this->mailData, 'HTML');
+        if ($this->body === '') {
+            $this->body = Arrays::getValueByPath($this->mailData, 'Text');
+        }
         $this->recipients = Arrays::getValueByPath($this->mailData, 'To');
         $this->subject = Arrays::getValueByPath($this->mailData, 'Subject');
     }
