@@ -43,7 +43,7 @@ class Mail
         $this->mailData = $mailData;
 
         $this->body = Arrays::getValueByPath($this->mailData, 'HTML');
-        $this->recipients = Arrays::getValueByPath($this->mailData, 'To.0.Address');
+        $this->recipients = Arrays::getValueByPath($this->mailData, 'To');
         $this->subject = Arrays::getValueByPath($this->mailData, 'Subject');
     }
 

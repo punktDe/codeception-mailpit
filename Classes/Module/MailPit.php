@@ -112,7 +112,7 @@ class MailPit extends Module
     {
         $recipients = $this->currentMail->getRecipients();
         foreach ($recipients as $recipient) {
-            if ($recipient === $address) {
+            if ($recipient['Address'] === $address) {
                 return;
             }
         }
