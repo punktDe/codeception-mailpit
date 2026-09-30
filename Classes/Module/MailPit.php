@@ -31,7 +31,7 @@ class MailPit extends Module
      * @param ModuleContainer $moduleContainer
      * @param mixed[]|null $config
      */
-    public function __construct(ModuleContainer $moduleContainer, array $config = null)
+    public function __construct(ModuleContainer $moduleContainer, ?array $config = null)
     {
         parent::__construct($moduleContainer, $config); 
         $this->mailPitClient = new MailPitClient(
